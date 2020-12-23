@@ -36,10 +36,10 @@ spec:
             httpGet:
               path: /
               port: "{{ .Values.app.port }}"
-          env:
-          - name: ENVIRONMENT 
-            value: "PROD"
-            
+          # env:
+          # - name: ENVIRONMENT 
+          #   value: "PROD"
+
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
