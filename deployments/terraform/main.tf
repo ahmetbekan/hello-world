@@ -1,5 +1,17 @@
+
+# module "helm-deploy" {
+#   source                 = "fuchicorp/chart/helm"
+#   deployment_name        = "hello-world"
+#   deployment_environment = "prod"
+#   deployment_endpoint    = "hello.ahmetbekan.com"
+#   deployment_path        = "hello-world"
+# }
+
+
+
+
 module "academy-deploy" {
-  source  = "fuchicorp/chart/helm"
+  source  = "tuyalou/chart/helm" #"fuchicorp/chart/helm"
   deployment_name        = "hello-world"
   deployment_environment = "${var.deployment_environment}"
   deployment_endpoint    = "${lookup(var.deployment_endpoint, "${var.deployment_environment}")}.${var.google_domain_name}"

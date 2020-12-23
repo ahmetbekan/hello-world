@@ -15,5 +15,5 @@ variable "deployment_endpoint" {
   }
 }
 variable "google_domain_name" {
-    default = "fuchicorp.com"
+    default = "ahmetbekan.com"
 }
