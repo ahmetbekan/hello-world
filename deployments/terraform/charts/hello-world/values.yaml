@@ -8,6 +8,15 @@ image:
   repository: ${deployment_image}
   pullPolicy: IfNotPresent
 
+app:
+  port: 5000
+
+globalEnvironments:
+  enabled: true
+  environments:
+  - name: ENVIRONMENT 
+    value: PROD
+
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
