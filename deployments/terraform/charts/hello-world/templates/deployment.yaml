@@ -31,14 +31,14 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              port: 5000
+              port: "{{ .Values.app.port }}"
           readinessProbe:
             httpGet:
               path: /
-              port: 5000
+              port: "{{ .Values.app.port }}"
           env:
-          - name: ENVIRONMENT 
-            value: "PROD"
+          - name: ENVIRONMENT
+            value: 'PROD'
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
@@ -53,8 +53,6 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
     {{- end }}
-
-
 
 # apiVersion: apps/v1
 # kind: Deployment
