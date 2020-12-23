@@ -17,6 +17,9 @@ globalEnvironments:
   - name: ENVIRONMENT 
     value: PROD
 
+    name: POD_NAME
+    value: default
+
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
