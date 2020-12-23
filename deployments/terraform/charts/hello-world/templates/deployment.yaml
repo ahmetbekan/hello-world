@@ -36,6 +36,9 @@ spec:
             httpGet:
               path: /
               port: 5000
+          env:
+          - name: ENVIRONMENT 
+            value: "PROD"
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
