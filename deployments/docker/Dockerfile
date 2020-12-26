@@ -4,5 +4,3 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 EXPOSE 5000
 CMD ["/bin/sh", "-c", "python /app/app.py"]
-
-
