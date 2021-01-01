@@ -20,4 +20,4 @@ module "academy-deploy" {
 } 
 output "application_endpoint" {
     value = "${lookup(var.deployment_endpoint, "${var.deployment_environment}")}.${var.google_domain_name}"
-}
+} 
